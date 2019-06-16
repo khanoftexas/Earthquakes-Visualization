@@ -76,7 +76,7 @@ function createMap() {
     var grayscale = L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="http://mapbox.com">Mapbox</a>',
         maxZoom: 18,
-        id: 'mapbox.high-contrast',
+        id: 'mapbox.light',
         accessToken: API_KEY
     });
 
@@ -126,5 +126,16 @@ function createMap() {
         return div;
     };
     legend.addTo(mymap);
-}
+
+    // add name    
+    var author = L.control({ position: 'bottomleft' });
+    author.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'name');
+
+    div.innerHTML = '<div style="color:Red"> Ehsan Khan </div>';
+    return div;
+    };
+    author.addTo(mymap);
+    }
 
