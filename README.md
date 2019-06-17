@@ -1,4 +1,5 @@
 # Unit 17 | Assignment - Visualizing Data with Leaflet
+![d3](img/earthquakes.png)
 
 ## Background
 
